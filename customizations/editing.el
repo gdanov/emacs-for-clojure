@@ -52,7 +52,10 @@
 (global-set-key (kbd "C-;") 'toggle-comment-on-line)
 
 ;; yay rainbows!
-(global-rainbow-delimiters-mode t)
+;(global-rainbow-delimiters-mode t)
+;; TODO fix rainbows, the global above got broken so I had to use the hack below
+(require 'rainbow-delimiters)
+(add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
 
 ;; use 2 spaces for tabs
 (defun die-tabs ()
