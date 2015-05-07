@@ -1,0 +1,41 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Sat May  2 13:01:15 2015
+;; Desktop file format version 206
+;; Emacs version 24.5.1
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (21828 44667 522251 0) (desktop . "206") "gdanov_local@georgis-MBP" nil nil ((((font-backend mac-ct ns) (fontsize . 0) (font . "-*-Menlo-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 2) (vertical-scroll-bars) (foreground-color . "#eaeaea") (background-color . "#000000") (line-spacing) (left-fringe . 8) (right-fringe . 8) (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (fullscreen . maximized) (horizontal-scroll-bars . t) (display-type . color) (background-mode . dark) (cursor-color . "#d54e53") (environment) (border-color . "#2a2a2a") (frameset--id . "FDC6-D793-13A2-960D") (frameset--mini t . t) (height . 86) (width . 317) (modeline . t) (minibuffer . t) (unsplittable) (left . 0) (top . 34) (right-divider-width . 0) (bottom-divider-width . 0) (icon-name) (visibility . t) (display . "georgis-MBP") (explicit-name) (tool-bar-position . top)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 4) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 64) (min-pixel-width . 80) (min-pixel-height-ignore . 32) (min-pixel-width-ignore . 32) (min-pixel-height-safe . 16) (min-pixel-width-safe . 16)) leaf (pixel-width . 2556) (pixel-height . 1360) (total-width . 319) (total-height . 85) (normal-height . 1.0) (normal-width . 1.0) (buffer "gdanov.el" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins 2) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 2901) (start . 2372))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring '("perspective\\" "root" "popup" "pop" "ac-js2" "js2" "cider" "tag" "tags" "indent"))
+(setq register-alist nil)
+(setq file-name-history '("/Users/gdanov_local/.emacs.d/customizations/gdanov.el" "/Users/gdanov_local/work/playground/cards/anim.xml" "/Users/gdanov_local/.emacs.d/customizations/editing.el" "~/.emacs.d/ido.last" "~/.emacs.d/init.el" "~/.emacs.d/customizations/gdanov.el" "~/work/playground/jira/project.clj" "~/work/playground/jira/bootstrap_repl.clj" "~/work/playground/jira/.DS_Store" "~/.emacs.d/customizations/editing.el" "~/work/playground/jira/src/jj/gram/core.clj" "~/work/playground/jira/.emacs.desktop" "~/work/playground/jira/src/bb/core.clj" "~/work/playground/jira/src/jj/repl.clj" "~/work/playground/cards/index.html" "~/work/playground/cards/logic.js" "~/work/playground/jira/target/base+system+user+dev/classes/META-INF/maven/jira/jira/pom.properties" "~/work/playground/jira/.lein-repl-history" "~/.emacs.d/elpa/perspective-1.10/perspective-autoloads.el" "~/.emacs.d/elpa/cider-0.8.2/cider-autoloads.el" "~/.emacs.d/elpa/pkg-info-20140610.630/pkg-info-autoloads.el" "~/.emacs.d/elpa/desktop-registry-1.2.0/desktop-registry-autoloads.el" "~/.emacs.d/bookmarks"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/Users/gdanov_local/.emacs.d/customizations/gdanov.el"
+  "gdanov.el"
+  'emacs-lisp-mode
+  '(projectile-mode linum-mode company-mode eldoc-mode paredit-mode)
+  2901
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . prefer-utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/gdanov_local/work/playground/jira/src/jj/repl.clj"
+  "repl.clj"
+  'clojure-mode
+  '(projectile-mode linum-mode rainbow-delimiters-mode company-mode eldoc-mode paredit-mode subword-mode cider-mode)
+  464
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
