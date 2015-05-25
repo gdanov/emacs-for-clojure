@@ -1,5 +1,5 @@
 .smex-items
-*~$
+#*~$
 places
 .recentf
 ido.last
@@ -10,4 +10,4 @@ auto-save-list
 backups
 *~
 url
-elpa
+elpa/**
