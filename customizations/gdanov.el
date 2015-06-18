@@ -1,3 +1,7 @@
+
+(setq nrepl-log-messages t)
+
+
 (setq ido-default-buffer-method `selected-window)
 
 (global-set-key (kbd "C-x C-d" ) 'ido-dired)
@@ -14,9 +18,9 @@
 
 (global-set-key (kbd "C-s-q") 'indent-region)    
 
-(global-set-key (kbd "<M-SPC>") 'fixup-whitespace)
+(global-set-key (kbd "<M-SPC>") 'fixup-whitespace) 
 
-;; (add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
+(add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
 
 (defun setup-imenu ()
   ;; clojure-mode seems to be bit brutal, see the manual
@@ -30,7 +34,7 @@
 											(concatenate 'string
 																	 "^(\\([[:alnum:]-_.]+/\\)*" name " +\\([[:alnum:]?_./\\:*\\-]+\\)")
 											2))
-							'("def" "defn" "defprotocol" "defrecord" "defmulti" "defmacro" "defmethod"))
+							'("def" "defn" "defprotocol" "defrecord" "defmulti" "defmacro" "defmethod" "deftype"))
 				 )
         )
   (imenu-add-menubar-index)
@@ -111,7 +115,7 @@
 
 (push '("*HTTP Response*" :noselect t :stick nil) popwin:special-display-config)
 (push "*cider-error*" popwin:special-display-config)
-(push '(cider-repl-mode) popwin:special-display-config)
+;; (push '(cider-repl-mode) popwin:special-display-config)
 
 ;; SCROLLING
 
@@ -122,7 +126,7 @@
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 
 ;; CIDER
-(setq cider-lein-parameters "trampoline repl :headless")
+;; (setq cider-lein-parameters "trampoline repl :headless")
 (setq cider-repl-pop-to-buffer-on-connect nil)
 (setq cider-prompt-save-file-on-load nil)
 (setq cider-repl-use-pretty-printing t)
@@ -150,6 +154,7 @@
 															 (cljr-add-keybindings-with-prefix "C-&")
 															 (yas/minor-mode 1)
 															 (setq clojure-defun-style-default-indent t)
+															 (yas/minor-mode 1)
 															 ))
 
 

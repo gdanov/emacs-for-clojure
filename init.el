@@ -8,8 +8,10 @@
              '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives
              '("tromey" . "http://tromey.com/elpa/") t)
+;; (add-to-list 'package-archives
+             ;; '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 
 ;; (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 ;;                          ("marmalade" . "http://marmalade-repo.org/packages/")
@@ -66,7 +68,15 @@
     tagedit
 
     ;; git integration
-    magit))
+    magit
+	
+	helm
+	helm-projectile
+	company
+	persp-projectile
+	popwin
+	clj-refactor
+	))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -140,7 +150,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
- '(cider-lein-parameters "trampoline repl :headless")
  '(coffee-tab-width 2)
  '(popwin:special-display-config
    (quote

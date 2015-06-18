@@ -11,3 +11,5 @@ backups
 *~
 url
 elpa/**
+*.persp
+*.tmp
