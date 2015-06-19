@@ -1,5 +1,5 @@
 
-(setq nrepl-log-messages t)
+;; (setq nrepl-log-messages t)
 
 
 (setq ido-default-buffer-method `selected-window)
@@ -91,16 +91,16 @@
 
 (global-set-key [(f8)]
                 '(lambda ()
-									 (interactive)
-									 (print "#########################")
+                   (interactive)
+                   (print "#########################")
 
 
 									 
-									 (print (first(window-tree)))
-									 (print (buffer-file-name (window-buffer)))
-									 (print (persp-all-names))
-									 ;; (print (persp-window-configuration persp-curr))
-									 (gethash "jira" perspectives-hash)))
+                   (print (first(window-tree)))
+                   (print (buffer-file-name (window-buffer)))
+                   (print (persp-all-names))
+                   ;; (print (persp-window-configuration persp-curr))
+                   (gethash "jira" perspectives-hash)))
 
 (toggle-frame-maximized)
 
@@ -134,12 +134,12 @@
 ;; Clojure keys
 (global-set-key (kbd "RET") (key-binding (kbd "M-j"))) ;; seems to not work
 (global-set-key (kbd "<C-return>")
-								'(lambda ()
-									 (interactive)
-									 (move-beginning-of-line nil)
-									 (newline-and-indent)
-									 (previous-line)                     
-									 (indent-for-tab-command)))
+                '(lambda ()
+                   (interactive)
+                   (move-beginning-of-line nil)
+                   (newline-and-indent)
+                   (previous-line)                     
+                   (indent-for-tab-command)))
 
 (global-set-key `[s-down] `scroll-up-line)
 (global-set-key `[s-up] `scroll-down-line)
@@ -150,12 +150,12 @@
 ;;
 (require 'clj-refactor)
 (add-hook 'clojure-mode-hook (lambda ()
-															 (clj-refactor-mode 1)
-															 (cljr-add-keybindings-with-prefix "C-&")
-															 (yas/minor-mode 1)
-															 (setq clojure-defun-style-default-indent t)
-															 (yas/minor-mode 1)
-															 ))
+                               (clj-refactor-mode 1)
+                               (cljr-add-keybindings-with-prefix "C-&")
+                               (yas/minor-mode 1)
+                               (setq clojure-defun-style-default-indent t)
+                               (yas/minor-mode 1)
+                               ))
 
 
 ;; -----------------------
@@ -198,6 +198,12 @@
 (setq cider-annotate-completion-candidates 1)
 
 (define-key projectile-mode-map [remap projectile-find-file-dwim] 'helm-projectile-grep) ;c-c p g
+
+(global-set-key (kbd "C-;") (lambda ()
+															(interactive)
+															(toggle-comment-on-line)
+															(next-line)))
+
 
 (defun my-forward-whitespace (arg)
   "Move point to the end of the next sequence of whitespace chars.

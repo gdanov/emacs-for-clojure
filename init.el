@@ -33,7 +33,7 @@
 ;; manually with M-x package-install
 ;; Add in your own as you wish:
 (defvar my-packages
-  '(;; makes handling lisp expressions much, much easier
+  '( ;; makes handling lisp expressions much, much easier
     ;; Cheatsheet: http://www.emacswiki.org/emacs/PareditCheatsheet
     paredit
 
@@ -70,13 +70,14 @@
     ;; git integration
     magit
 	
-	helm
-	helm-projectile
-	company
-	persp-projectile
-	popwin
-	clj-refactor
-	))
+    helm
+    helm-projectile
+    company
+    persp-projectile
+    popwin
+    clj-refactor
+
+    ))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
