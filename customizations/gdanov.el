@@ -32,7 +32,7 @@
 							(lambda (name)
 								(list name
 											(concatenate 'string
-																	 "^(\\([[:alnum:]-_.]+/\\)*" name " +\\([[:alnum:]?_./\\:*\\-]+\\)")
+																	 "^(\\([[:alnum:]-_.]+/\\)*" name " +\\([[:alnum:]$#?_./\\:*\\-]+\\)")
 											2))
 							'("def" "defn" "defprotocol" "defrecord" "defmulti" "defmacro" "defmethod" "deftype"))
 				 )
@@ -126,7 +126,7 @@
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 
 ;; CIDER
-;; (setq cider-lein-parameters "trampoline repl :headless")
+(setq cider-lein-parameters "trampoline repl :headless")
 (setq cider-repl-pop-to-buffer-on-connect nil)
 (setq cider-prompt-save-file-on-load nil)
 (setq cider-repl-use-pretty-printing t)
@@ -226,6 +226,15 @@ backwards ARG times if negative."
 (global-set-key (kbd "M-b") 'my-backward-whitespace)
 
 
+(global-set-key (kbd "M-/") 'company-complete)
 
+(setq bookmark-version-control 1)
+(setq bookmark-save-flag 1)
+
+;; --------------------
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-hook 'js2-mode-hook (lambda ()
+													 (define-key js2-mode-map "{" 'paredit-open-curly)
+													 (define-key js2-mode-map "}" 'paredit-close-curly-and-newline)))
 ;; --------------------
 (load "savewin.el")
