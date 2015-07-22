@@ -10,6 +10,5 @@ auto-save-list
 backups
 *~
 url
-elpa/**
 *.persp
 *.tmp
